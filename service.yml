@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: front-svc
+  name: front-svc
+spec:
+  ports:
+  - port: 8100
+    protocol: TCP
+    targetPort: 8100
+  selector:
+    service: front-app
+  type: ClusterIP

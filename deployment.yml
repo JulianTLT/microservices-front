@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-app
+  labels:
+    service: front-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      service: front-app
+  template:
+    metadata:
+      labels:
+        service: front-app
+    spec:
+      containers:
+      - name: microservice-front
+        image: sjulian/microservice-front:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8100
+      restartPolicy: Always
