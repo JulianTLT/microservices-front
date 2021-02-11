@@ -11,4 +11,4 @@ spec:
     targetPort: 8100
   selector:
     service: front-app
-  type: ClusterIP
+  type: LoadBalancer

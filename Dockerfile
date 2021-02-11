@@ -6,4 +6,4 @@ COPY . .
 RUN npm install
 RUN npm install -g ionic
 RUN ionic build
-CMD ["ionic", "serve"]
+CMD ["ionic", "serve", "--external"]
