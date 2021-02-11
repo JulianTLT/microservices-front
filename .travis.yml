@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t microservice-front .
-  - docker tag microservice-feed sjulian/microservice-front:latest
+  - docker tag microservice-front sjulian/microservice-front:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
